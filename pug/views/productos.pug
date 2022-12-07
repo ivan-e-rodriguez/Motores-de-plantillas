@@ -1,0 +1,19 @@
+extends main
+
+block productos
+
+    if listaProductos
+        .table-responsive
+            table.table.table-dark
+                tr(style='color: yellow;')
+                th Name
+                th Title
+                th Image
+                each producto in productos
+                    tr
+                        td=producto.title
+                        td=producto.price
+                        td
+                            img(src=producto.thumbnail)
+    else
+        h3.alert.alert-danger no se encontraron datos

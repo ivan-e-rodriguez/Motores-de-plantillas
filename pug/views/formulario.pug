@@ -1,0 +1,20 @@
+extends main
+
+block formulario
+
+    h1(style='color:blue;') Ingrese el Producto
+    br
+    form(action='/productos' method='post')
+    .form-group
+        label(for='title')
+        b Nombre del producto
+        input#title.form-control(type='text' name='title')
+    .form-group
+        label(for='price')
+        b Precio
+        input#price.form-control(type='number' name='price')
+    .form-group
+        label(for='thumbnail')
+        b Link de imagen
+        input#thumbnail.form-control(type='text' name='thumbnail')
+    button.btn.btn-success.mt-3.mb-5 Enviar
